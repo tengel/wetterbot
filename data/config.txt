@@ -1,0 +1,5 @@
+[xmpp]
+username:
+xmppserver:
+resource:
+password:

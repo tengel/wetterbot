@@ -1,0 +1,17 @@
+# bland.txt
+#
+# id	bundesland	url-part
+
+0	"Schleswig-Holstein/Hamburg"	"SG00"
+1	"Mecklenburg-Vorpommern"    	"RW00"
+2	"Brandenburg / Berlin"      	"PD00"
+3	"Sachsen-Anhalt"            	"MB00"
+4	"Niedersachsen / Bremen"    	"HN00"
+5	"Nordrhein-Westfalen"       	"EM00"
+6	"Rheinland-Pfalz / Saarland"	"TR00"
+7	"Thueringen"                 	"EF00"
+8	"Sachsen"                   	"LZ00"
+9	"Hessen"                    	"OF00"
+10	"Baden Wuerttemberg"          	"SU00"
+11	"Bayern"                     	"MS00"
+
