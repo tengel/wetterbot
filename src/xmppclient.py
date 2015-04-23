@@ -28,7 +28,6 @@ from userliste import *
 import logger
 
 class XmppClient(threading.Thread):
-    botDebug = [] # 'always']
     msgIn = Queue.Queue()
     msgOut = Queue.Queue()
     userListe = UserListe()
@@ -177,6 +176,11 @@ Fuer weitere Informationen mailto:timo-e at freenet dot de
         self.botUsername   = config.get('xmpp', 'username')
         self.botXmppServer = config.get('xmpp', 'xmppserver')
         self.botPassword   = config.get('xmpp', 'password')
+        if (config.has_option('xmpp', 'xmppdebug') and
+            config.get('xmpp', 'xmppdebug').lower() == 'true'):
+            self.botDebug = ['always']
+        else:
+            self.botDebug = []
         self.shutdownFlag  = 0
         self.connect()
 
@@ -186,7 +190,7 @@ Fuer weitere Informationen mailto:timo-e at freenet dot de
         retry = 0
         while (retry < 10):
             self.conn=xmpp.Client(self.botXmppServer, debug=self.botDebug)
-            conres=self.conn.connect(('jabberd.jabber.ccc.de',80))
+            conres=self.conn.connect()
             if conres:
                 break
             retry += 1

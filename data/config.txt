@@ -3,3 +3,4 @@ username:
 xmppserver:
 resource:
 password:
+xmppdebug: False
